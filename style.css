@@ -1,0 +1,61 @@
+table {
+    user-select: none;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.info {
+    display: flex;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+.button {
+    width: 80px;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.card-td {
+    width: 300px;
+    height: 150px;
+    border: solid 2px black;
+    border-radius: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.card-td:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 0px 18px 0px rgba(0,0,0,0.24); 
+    box-shadow: 0px 10px 13px -7px #000000, -1px 0px 18px 0px rgba(0,0,0,0.24);
+}
+
+.card-td-selected {
+    box-shadow: 0 0 10px rgba(255,255,0,0.75);
+}
