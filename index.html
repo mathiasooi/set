@@ -3,12 +3,16 @@
 <head>
     <title>Mathias | Set</title>
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body onload="loadDeck()">
+<body onload="main()">
     <div class="content">
         <div class="game">
+            <h1>SET</h1>
             <table>
                 <tr>
                     <td>
@@ -37,17 +41,32 @@
                 <tr>
                     <td class="button-wrapper">
                         <div class="button">Add 3</div>
-                        <div class="button">Reset</div>
-                        <div class="button">IDK :D</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="info">
-                        Rules: <a href="https://en.wikipedia.org/wiki/Set_(card_game)">here</a>
+                        <div class="button" onclick="main(); window.scrollTo(0, 0);">Reset</div>
+                        <div class="button" onclick="location.href='#rules'">Rules</div>
                     </td>
                 </tr>
             </table>
         </div>
+    </div>
+    <div class="content rules" id="rules">
+        <h1>SET Game Rules</h1>
+        <!-- Insert cool image  -->
+        <img src="assets/set.png" alt="SET game" width="571" height="357">
+        <h2>Cards</h2>
+        <p>There are 81 unique cards in total<br>Each card has has 4 features to it</p>
+        <ul>
+            <li>Color</li>
+            <li>Number</li>
+            <li>Shape</li>
+            <li>Shading</li>
+          </ul>
+        <h2>Objective</h2>
+        <p>The objective of the game is to make as many sets as possible</p>
+        <h2>What is a set?</h2>
+        <p>A set is 3 cards, such that for all features, all 3 cards must all have the same different feature</p>
+        <p>For example, this is a set:</p>
+        <!-- insert set example image -->
+        Wiki: <a href="https://en.wikipedia.org/wiki/Set_(card_game)">here</a>
     </div>
 </body>
 
