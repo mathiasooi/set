@@ -3,6 +3,7 @@ var deck = [];
 var color = ["red", "green", "purple"];
 var pattern = ["filled", "dashed", "empty"];
 var shape = ["squiggle", "oval", "diamond"];
+var correct = 0, wrong = 0;
 
 function remove(arr) {
     // Stupid js doesnt have remove by value
@@ -52,15 +53,24 @@ function cardClicked(card) {
             }
             remove(deck, toRemove[0], toRemove[1], toRemove[2]);
             display();
+            correct++
         }
         else {
             console.log("NOT SET", selected);
             for (var i = 0; i < 3; ++i) {
                 document.getElementById("c" + String(selected[i])).classList.add("card-td-incorrect");
             }
+            wrong++;
         }
+        displayStats();
         selected = [];
     }
+}
+
+function displayStats() {
+    document.getElementById("stat-left").innerHTML = "Cards Left: " + deck.length;
+    document.getElementById("stat-correct").innerHTML = "Correct: " + correct;
+    document.getElementById("stat-incorrect").innerHTML = "Incorrect: " + wrong;
 }
 
 function isSet() {
@@ -120,10 +130,13 @@ function display() {
     for (var i = 0; i < 12; ++i) {
         document.getElementById("c" + i).innerHTML = deck[i].svg();
     }
+    displayStats();
 }
 
 function main() {
     loadDeck();
+    correct = 0;
+    wrong = 0;
     console.log("Loaded deck", deck);
     // shuffle();
     // console.log("Shuffled deck", deck);

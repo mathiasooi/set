@@ -38,6 +38,19 @@ a {
     color: cornflowerblue;
 }
 
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-stats {
+    margin-left: 20px;
+}
+
+.game-stats h3 {
+    margin-left: 5px;
+}
+
 .button:hover {
 	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
 	background-color:#408c99;
@@ -82,25 +95,25 @@ a {
 }
 
 .card-td-correct {
-    animation: correct 1s 1;
+    animation: correct 0.25s 1;
 }
 
 .card-td-incorrect {
-    animation: incorrect 1s 1;
+    animation: incorrect 0.25s 1;
 }
 
 @keyframes correct {
-    0%      {box-shadow: 5px 5px 5px 5px rgba(0,255,0,0.25);}
-    25%     {box-shadow: 5px 5px 5px 5px rgba(0,255,0,0.50);}
-    75%     {box-shadow: 5px 5px 5px 5px rgba(0,255,0,0.75);}
-    100%    {box-shadow: 5px 5px 5px 5px rgba(0,255,0,1.0);}
+    0%      {box-shadow: 0 0 10px rgba(0,255,0,0.25);}
+    25%     {box-shadow: 0 0 10px rgba(0,255,0,0.50);}
+    75%     {box-shadow: 0 0 10px rgba(0,255,0,0.75);}
+    100%    {box-shadow: 0 0 10px rgba(0,255,0,1.0);}
 }
 
 @keyframes incorrect {
-    0%      {box-shadow: 5px 5px 5px 5px rgba(255,0,0,0.25);}
-    25%     {box-shadow: 5px 5px 5px 5px rgba(255,0,0,0.50);}
-    75%     {box-shadow: 5px 5px 5px 5px rgba(255,0,0,0.75);}
-    100%    {box-shadow: 5px 5px 5px 5px rgba(255,0,0,1.0);}
+    0%      {box-shadow: 0 0 10px rgba(255,0,0,0.25);}
+    25%     {box-shadow: 0 0 10px rgba(255,0,0,0.50);}
+    75%     {box-shadow: 0 0 10px rgba(255,0,0,0.75);}
+    100%    {box-shadow: 0 0 10px rgba(255,0,0,1.0);}
 }
 
 h1 {
